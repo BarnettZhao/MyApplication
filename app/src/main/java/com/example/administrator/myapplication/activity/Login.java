@@ -58,7 +58,10 @@ public class Login extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onResume() {
         super.onResume();
-        String pathMe = getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/myicon.jpg";
+        String pathMe = "";
+        if (getApplicationContext().getExternalFilesDir("icon").exists()) {
+            pathMe = getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/myicon.jpg";
+        }
 //		String pathIt =getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/it.jpg";
         Log.e("path" , pathMe);
         Bitmap bitmap = BaseActivity.getDiskBitmap(pathMe);
