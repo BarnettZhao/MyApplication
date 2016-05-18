@@ -27,6 +27,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Administrator on 2016/1/10.
+ * login
  */
 public class Login extends BaseActivity implements View.OnClickListener{
     private static final String TAG = "Login";
@@ -160,8 +161,6 @@ public class Login extends BaseActivity implements View.OnClickListener{
         pd.setMessage("Is_landing");
         pd.show();
 
-
-        final long start = System.currentTimeMillis();
         // 调用sdk登陆方法登陆聊天服务器
         Log.e(TAG, "EMClient.getInstance().login");
         EMClient.getInstance().login(loginName, loginPwd, new EMCallBack() {
