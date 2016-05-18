@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="ImageScale" parent="android:Theme.Black.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimHead</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 设置全屏显示 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="AnimHead" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/head_in</item>
+        <item name="android:windowExitAnimation">@anim/head_out</item>
+    </style>
+    <style name="setIconDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AudioRecordDialog" parent="@android:style/Theme.Dialog">
+
+        <!-- 设置边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置悬浮 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 设置覆盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 设置背景颜色 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置有无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 设置全屏 -->
+        <item name="android:windowFullscreen">false</item>
+        <!-- 设置背景的暗色调 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

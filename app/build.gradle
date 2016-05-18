@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'//声明构建的项目类型
+//设置编译android项目的参数
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+//Android默认配置
+    defaultConfig {
+        applicationId "com.example.administrator.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    //混淆配置
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+//依赖库
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile files('libs/httpmime-4.1.3.jar')
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/open_sdk_r5509.jar')
+    compile files('libs/SocialSDK_QQZone_3.jar')
+    compile files('libs/SocialSDK_WeiXin_1.jar')
+    compile files('libs/SocialSDK_WeiXin_2.jar')
+    compile files('libs/umeng_social_sdk.jar')
+    compile files('libs/hyphenatechat_3.1.0.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.yolanda.nohttp:nohttp:+'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.facebook.fresco:fresco:0.10.0'
+}

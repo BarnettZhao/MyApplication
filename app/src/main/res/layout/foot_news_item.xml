@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_margin="16dp"
+              android:layout_marginLeft="6dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<TextView
+    android:id="@+id/foot_item_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:textColor="#333333"
+    android:textSize="18sp"
+    android:singleLine="true"
+    android:text="新华视点:深改小组四份文件聚焦生态建设透露哪些新信号? "/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/foot_item_image"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            />
+        <TextView
+            android:id="@+id/foot_item_content"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:text="近日，《2016年第一季度中国主要城市交通分析报告》
+        显示今年一季度全国城市拥堵大幅缓解，其中一线城市下降最明显。同时，
+        报告还公布了2016年度第一季度中国堵城排行榜，首次揭示了top60榜单。
+        据悉，截止目前，高德地图已连续三年发布了中国主要城市交通分析报告，
+        涵盖全国60个城市。此外，..."/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/foot_item_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#0000ff"
+            android:text="光明网"/>
+        <TextView
+            android:id="@+id/foot_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textSize="14sp"
+            android:text="2016-04-29 05:34:08"/>
+    </LinearLayout>
+</LinearLayout>
