@@ -99,7 +99,7 @@ public class Foot extends BaseFragment implements View.OnClickListener{
     public void onResume() {
         super.onResume();
         String pathMe =getActivity().getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/myicon.jpg";
-//		String pathIt =getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/it.jpg";
+
         Bitmap bitmap = BaseActivity.getDiskBitmap(pathMe);
         Log.e("path" , pathMe);
         if (bitmap != null){

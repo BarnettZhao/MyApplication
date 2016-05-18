@@ -43,13 +43,6 @@ public class Login extends BaseActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         initWidgets();
-       /* String pathMe =getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/me.jpg";
-        Bitmap bitmapLogin = getDiskBitmap(pathMe);
-        if (bitmapLogin != null){
-            mCircleLoginIcon.setImageBitmap(bitmapLogin);
-        }else {
-            mCircleLoginIcon.setImageResource(R.mipmap.icon);
-        }*/
         if (PreferencesUtils.getInstance().readSharedBoolean(this,"isremember",false)) {
             mEditName.setText(PreferencesUtils.getInstance().readSharedString(this,"loginName",""));
             mEditPass.setText(PreferencesUtils.getInstance().readSharedString(this,"pwd",""));
@@ -63,7 +56,6 @@ public class Login extends BaseActivity implements View.OnClickListener{
         if (getApplicationContext().getExternalFilesDir("icon").exists()) {
             pathMe = getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/myicon.jpg";
         }
-//		String pathIt =getApplicationContext().getExternalFilesDir("icon").getAbsolutePath()+"/ailafei/icon/it.jpg";
         Log.e("path" , pathMe);
         Bitmap bitmap = BaseActivity.getDiskBitmap(pathMe);
         Log.e("path" , pathMe);
@@ -99,7 +91,6 @@ public class Login extends BaseActivity implements View.OnClickListener{
             case R.id.check_remember:
                 if (mCheckRemember.isChecked()) {
                     PreferencesUtils.getInstance().writeSharedBoolean(this, "isremember", true);
-//                    PreferencesUtils.getInstance().writeSharedString(this,"loginPwd",loginPwd);
                 } else {
                     PreferencesUtils.getInstance().writeSharedBoolean(this, "isremember", false);
                 }
@@ -118,7 +109,6 @@ public class Login extends BaseActivity implements View.OnClickListener{
             case R.id.button_login:
                 if (mCheckRemember.isChecked()) {
                     PreferencesUtils.getInstance().writeSharedBoolean(this, "isremember", true);
-//                    PreferencesUtils.getInstance().writeSharedString(this,"loginPwd",loginPwd);
                 } else {
                     PreferencesUtils.getInstance().writeSharedBoolean(this, "isremember", false);
                 }
@@ -182,7 +172,6 @@ public class Login extends BaseActivity implements View.OnClickListener{
                     Log.e("LoginActivity", "update current user nick fail");
                 }
                 //异步获取当前用户的昵称和头像(从自己服务器获取，demo使用的一个第三方服务)
-//                DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
                 Log.e(TAG,"name: " + loginName + "pwd: " + loginPwd);
                 PreferencesUtils.getInstance().writeSharedString(Login.this, "loginName", mEditName.getText().toString().trim());
                 PreferencesUtils.getInstance().writeSharedString(Login.this, "pwd",mEditPass.getText().toString().trim());

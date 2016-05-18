@@ -66,7 +66,6 @@
         <activity android:name=".set.activity.SetIcon" android:theme="@android:style/Theme.Translucent"/>
         <activity android:name=".set.activity.WriteFoot" android:theme="@android:style/Theme.Translucent"/>
         <activity android:name=".foot.ui.AddRecoreder"/>
-        <activity android:name=".foot.ui.FootDetails"/>
         <activity android:name=".activity.RegisterActivity"/>
         <activity android:name=".chat.ui.ChatActivity"/>
         <activity android:name=".set.activity.LocationMapActivity"/>

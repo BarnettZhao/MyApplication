@@ -1,19 +1,22 @@
 package com.example.administrator.myapplication.foot.ui;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
+
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.view.KeyEvent;
+
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.myapplication.BaseActivity;
 import com.example.administrator.myapplication.R;
+import com.example.administrator.myapplication.utils.ProgressDialogUtil;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.UMShareListener;
@@ -34,6 +37,7 @@ public class NewsDetail extends BaseActivity implements View.OnClickListener{
 	private ImageView back;
 	private TextView textViewShare;
 	private UMShareAPI mShareAPI;
+	private ProgressDialog dialog;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,6 +64,20 @@ public class NewsDetail extends BaseActivity implements View.OnClickListener{
 		source = intent.getStringExtra(NEWS_SOURCE);
 		time = intent.getStringExtra(NEWS_TIME);
 		webView.loadUrl(url);
+		showProgressDialog();
+		webView.setWebViewClient(new WebViewClient(){
+
+			@Override
+			public void onPageFinished(WebView view, String url) {
+				super.onPageFinished(view, url);
+				finishProgeressDialog();
+			}
+
+			@Override
+			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				return false;
+			}
+		});
 	}
 
 	@Override
@@ -113,5 +131,16 @@ public class NewsDetail extends BaseActivity implements View.OnClickListener{
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		mShareAPI.onActivityResult(requestCode, resultCode, data);
+	}
+	private void showProgressDialog(){
+		//使用自定义的加载Dialog
+		dialog = new ProgressDialog(this);
+//        dialog.setTitle("友情提示");
+		dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		dialog.setMessage("正在加载...");
+		dialog.show();
+	}
+	private void finishProgeressDialog(){
+		dialog.dismiss();
 	}
 }
