@@ -1,12 +1,14 @@
 package com.example.administrator.myapplication.chat.ui;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
@@ -14,7 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.example.administrator.myapplication.BaseActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.R;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
@@ -109,6 +111,7 @@ public class ShowBigImage extends BaseActivity {
             public void onSuccess() {
 
                 runOnUiThread(new Runnable() {
+                    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
                     @Override
                     public void run() {
                         new File(tempPath).renameTo(new File(localFilePath));
@@ -143,6 +146,7 @@ public class ShowBigImage extends BaseActivity {
                     file.delete();
                 }
                 runOnUiThread(new Runnable() {
+                    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
                     @Override
                     public void run() {
                         if (ShowBigImage.this.isFinishing() || ShowBigImage.this.isDestroyed()) {
@@ -158,6 +162,7 @@ public class ShowBigImage extends BaseActivity {
                 EMLog.d(TAG, "Progress: " + progress);
                 final String str2 = "下载图片";
                 runOnUiThread(new Runnable() {
+                    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
                     @Override
                     public void run() {
                         if (ShowBigImage.this.isFinishing() || ShowBigImage.this.isDestroyed()) {

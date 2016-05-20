@@ -1,13 +1,11 @@
 package com.example.administrator.myapplication.netConnection;
 
-import android.app.VoiceInteractor;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.example.administrator.myapplication.BaseApplication;
+import com.example.administrator.myapplication.base.BaseApplication;
 
 import java.util.HashMap;
 import java.util.Map;

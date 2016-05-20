@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.base;
 
 import android.content.Context;
 import android.util.Log;
@@ -46,7 +46,7 @@ public abstract class BaseAdapterNew<T> extends ArrayAdapter<T> {
 		try {
 			setViewData(convertView, position);
 		} catch (Exception e) {
-			Log.e("adapter setViewData error " + this.getClass().getSimpleName(), e.toString());
+//			Log.e("adapter setViewData error " + this.getClass().getSimpleName(), e.toString());
 		}
 		return convertView;
 	}

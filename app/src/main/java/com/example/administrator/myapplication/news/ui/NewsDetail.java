@@ -1,8 +1,7 @@
-package com.example.administrator.myapplication.foot.ui;
+package com.example.administrator.myapplication.news.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 import android.os.Bundle;
@@ -14,9 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.myapplication.BaseActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.utils.ProgressDialogUtil;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.UMShareListener;

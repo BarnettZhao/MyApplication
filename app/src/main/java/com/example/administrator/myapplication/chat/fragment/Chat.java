@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.myapplication.MainActivity;
+import com.example.administrator.myapplication.base.MainActivity;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.chat.adapter.FriendListAdapter;
 import com.example.administrator.myapplication.chat.ui.ChatActivity;

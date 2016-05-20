@@ -14,7 +14,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.administrator.myapplication.foot.adapter.NewsMenuAdapter;
+import com.example.administrator.myapplication.news.adapter.NewsMenuAdapter;
 import com.example.administrator.myapplication.R;
 
 

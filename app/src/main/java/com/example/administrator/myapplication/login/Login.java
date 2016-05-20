@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication.activity;
+package com.example.administrator.myapplication.login;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.myapplication.ActivityController;
-import com.example.administrator.myapplication.BaseActivity;
-import com.example.administrator.myapplication.MainActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
+import com.example.administrator.myapplication.base.MainActivity;
 import com.example.administrator.myapplication.utils.PreferencesUtils;
 import com.example.administrator.myapplication.R;
 import com.hyphenate.EMCallBack;

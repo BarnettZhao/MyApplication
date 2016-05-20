@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.administrator.myapplication.activity;
+package com.example.administrator.myapplication.login;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -20,14 +20,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.administrator.myapplication.BaseActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.R;
-import com.hyphenate.EMConnectionListener;
 import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMOptions;
 import com.hyphenate.exceptions.HyphenateException;
-import com.hyphenate.util.NetUtils;
 
 /**
  * 注册页

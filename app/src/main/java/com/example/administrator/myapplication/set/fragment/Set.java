@@ -7,10 +7,6 @@ import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.PixelFormat;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -25,13 +21,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.myapplication.ActivityController;
-import com.example.administrator.myapplication.BaseActivity;
-import com.example.administrator.myapplication.MainActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
+import com.example.administrator.myapplication.base.MainActivity;
 import com.example.administrator.myapplication.utils.DataCleanManager;
 import com.example.administrator.myapplication.utils.PreferencesUtils;
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.activity.ImageShower;
-import com.example.administrator.myapplication.activity.Login;
+import com.example.administrator.myapplication.login.Login;
 import com.example.administrator.myapplication.set.activity.WriteFoot;
 import com.example.administrator.myapplication.set.activity.LocationMapActivity;
 import com.example.administrator.myapplication.set.activity.SetIcon;
@@ -127,10 +122,6 @@ public class Set extends Fragment implements View.OnClickListener{
 					mTextViewLogin.setText(mEditMotto.getText().toString().trim());
 					mEditMotto.setText("");
 				}
-				break;
-			case R.id.circleImageView_icon:
-				Intent intent=new Intent(getActivity(), ImageShower.class);
-				startActivity(intent);
 				break;
 			case R.id.person_info_location_ll:
 				startActivityForResult(new Intent(getActivity(), LocationMapActivity.class), REQUEST_ACT_LOCATION);

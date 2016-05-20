@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.administrator.myapplication.BaseActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.utils.PreferencesUtils;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.database.MyDbManager;

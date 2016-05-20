@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.base;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,11 +11,11 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.administrator.myapplication.activity.Login;
+import com.example.administrator.myapplication.ActivityController;
+import com.example.administrator.myapplication.login.Login;
 import com.hyphenate.EMConnectionListener;
 import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMOptions;
 import com.hyphenate.util.NetUtils;
 
 import java.io.File;

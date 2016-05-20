@@ -1,12 +1,12 @@
-package com.example.administrator.myapplication.activity;
+package com.example.administrator.myapplication.login;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.widget.RelativeLayout;
 
-import com.example.administrator.myapplication.BaseActivity;
-import com.example.administrator.myapplication.MainActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
+import com.example.administrator.myapplication.base.MainActivity;
 import com.example.administrator.myapplication.utils.PreferencesUtils;
 import com.example.administrator.myapplication.R;
 

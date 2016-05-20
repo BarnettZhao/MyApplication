@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.base;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;

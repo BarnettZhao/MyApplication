@@ -1,12 +1,11 @@
 package com.example.administrator.myapplication.chat.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.administrator.myapplication.BaseAdapterNew;
+import com.example.administrator.myapplication.base.BaseAdapterNew;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.dao.ChatMessage;
 

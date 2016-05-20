@@ -5,7 +5,7 @@ package com.example.administrator.myapplication;
  */
 public class Config {
     //聊天时其他类型信息请求码
-    public final static int SELECTIMG= 0x322;
+
     public final static int SELECTFILE= 0x323;
     public final static int SELECTVOICE= 0x324;
     public final static int SELECTVIDEO= 0x325;

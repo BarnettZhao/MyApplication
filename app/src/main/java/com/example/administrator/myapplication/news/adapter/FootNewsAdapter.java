@@ -1,9 +1,6 @@
-package com.example.administrator.myapplication.foot.adapter;
+package com.example.administrator.myapplication.news.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,14 +8,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.administrator.myapplication.BaseAdapterNew;
+import com.example.administrator.myapplication.base.BaseAdapterNew;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.dao.FootNews;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.List;
 
 /**

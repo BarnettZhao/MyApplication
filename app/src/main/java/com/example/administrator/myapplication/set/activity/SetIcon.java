@@ -1,8 +1,5 @@
 package com.example.administrator.myapplication.set.activity;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,7 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.administrator.myapplication.BaseActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.R;
 
 import java.io.BufferedOutputStream;

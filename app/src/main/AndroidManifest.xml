@@ -38,16 +38,16 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <application
-        android:name=".BaseApplication"
+        android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Login">
+        <activity android:name=".login.Login">
 
         </activity>
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name=".login.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,21 +55,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".base.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".photo.PhotoActivity"/>
-        <activity android:name=".activity.ImageShower" android:theme="@android:style/Theme.Translucent" />
         <activity android:name=".set.activity.SetIcon" android:theme="@android:style/Theme.Translucent"/>
         <activity android:name=".set.activity.WriteFoot" android:theme="@android:style/Theme.Translucent"/>
-        <activity android:name=".foot.ui.AddRecoreder"/>
-        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".login.RegisterActivity"/>
         <activity android:name=".chat.ui.ChatActivity"/>
         <activity android:name=".set.activity.LocationMapActivity"/>
-        <activity android:name=".foot.ui.NewsDetail"/>
+        <activity android:name=".news.ui.NewsDetail"/>
         <activity android:name=".chat.ui.ShowBigImage"/>
 
         <activity

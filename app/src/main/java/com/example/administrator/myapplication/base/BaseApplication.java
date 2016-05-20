@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.base;
 
 import android.app.ActivityManager;
 import android.app.Application;

@@ -5,9 +5,9 @@ import android.view.View;
 
 import android.widget.TextView;
 
-import com.example.administrator.myapplication.BaseAdapterNew;
+import com.example.administrator.myapplication.base.BaseAdapterNew;
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.ViewHolder;
+import com.example.administrator.myapplication.base.ViewHolder;
 import com.example.administrator.myapplication.dao.FriendList;
 
 import java.util.List;

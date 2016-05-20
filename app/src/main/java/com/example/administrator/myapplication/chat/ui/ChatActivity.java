@@ -17,7 +17,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
 
-import android.text.TextUtils;
 import android.util.Log;
 
 import android.view.View;
@@ -26,12 +25,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.myapplication.BaseActivity;
+import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.chat.adapter.MessageListAdapter;
 import com.example.administrator.myapplication.chat.audioUtil.AudioRecordButton;
@@ -48,6 +46,7 @@ import java.util.List;
  */
 public class ChatActivity extends BaseActivity implements View.OnClickListener {
     public static final String FRIEND_NAME = "friendName";
+    public final static int SELECTIMG= 0x322;
 
     private RelativeLayout mButtonBiaoQing, mRelativeEdit;
     private ImageView mbutton_back;
@@ -292,24 +291,21 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
         } else {
             intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         }
-        startActivityForResult(intent, com.example.administrator.myapplication.Config.SELECTIMG);
+        startActivityForResult(intent, SELECTIMG);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode== Activity.RESULT_OK){
-
             switch (requestCode){
-                case com.example.administrator.myapplication.Config.SELECTIMG:
-
+                case SELECTIMG:
                     if (data != null) {
                         Uri selectedImage = data.getData();
                         if (selectedImage != null) {
                             sendPicByUri(selectedImage);
                         }
                     }
-
                     break;
             }
         }

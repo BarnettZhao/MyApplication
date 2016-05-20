@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.base;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -11,9 +11,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.administrator.myapplication.ActivityController;
+import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.chat.fragment.Chat;
 import com.example.administrator.myapplication.dao.FriendList;
-import com.example.administrator.myapplication.foot.fragment.Foot;
+import com.example.administrator.myapplication.news.fragment.Foot;
 import com.example.administrator.myapplication.set.fragment.Set;
 import com.example.administrator.myapplication.utils.PreferencesUtils;
 import com.hyphenate.EMCallBack;

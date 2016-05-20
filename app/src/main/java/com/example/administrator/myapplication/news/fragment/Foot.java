@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication.foot.fragment;
+package com.example.administrator.myapplication.news.fragment;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -7,7 +7,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,17 +16,17 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
-import com.example.administrator.myapplication.BaseActivity;
-import com.example.administrator.myapplication.BaseFragment;
+import com.example.administrator.myapplication.base.BaseActivity;
+import com.example.administrator.myapplication.base.BaseFragment;
 
 import com.example.administrator.myapplication.dao.FootNews;
-import com.example.administrator.myapplication.foot.adapter.FootNewsAdapter;
-import com.example.administrator.myapplication.foot.adapter.NewsMenuAdapter;
+import com.example.administrator.myapplication.news.adapter.FootNewsAdapter;
+import com.example.administrator.myapplication.news.adapter.NewsMenuAdapter;
 import com.example.administrator.myapplication.R;
 
 import com.example.administrator.myapplication.dao.FootThing;
 
-import com.example.administrator.myapplication.foot.ui.NewsDetail;
+import com.example.administrator.myapplication.news.ui.NewsDetail;
 import com.example.administrator.myapplication.xListView.MyListView;
 import com.google.gson.Gson;
 import com.yolanda.nohttp.NoHttp;

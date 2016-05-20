@@ -1,24 +1,15 @@
-package com.example.administrator.myapplication.foot.adapter;
+package com.example.administrator.myapplication.news.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.administrator.myapplication.BaseAdapterNew;
+import com.example.administrator.myapplication.base.BaseAdapterNew;
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.activity.ImageShower;
 import com.example.administrator.myapplication.dao.FootThing;
 
 
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Administrator on 2016/1/2.

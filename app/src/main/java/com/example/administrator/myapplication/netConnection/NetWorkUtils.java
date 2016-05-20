@@ -3,7 +3,7 @@ package com.example.administrator.myapplication.netConnection;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.example.administrator.myapplication.BaseApplication;
+import com.example.administrator.myapplication.base.BaseApplication;
 
 /**
  * Created by Administrator on 2016/1/5.
