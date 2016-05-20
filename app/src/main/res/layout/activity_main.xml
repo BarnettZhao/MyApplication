@@ -24,7 +24,7 @@
             android:padding="10dp"
             android:gravity="center"
             android:drawableTop="@drawable/foot"
-            android:text="足迹"
+            android:text="新闻"
             android:layout_weight="1"
             />
         <RadioButton
