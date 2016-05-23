@@ -145,36 +145,40 @@ public class Set extends Fragment implements View.OnClickListener{
 				Toast.makeText(getActivity().getApplicationContext(),"已退出应用",Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.layout_cache:
-				View dialogView = View.inflate(getActivity(), R.layout.custom_dialog_view, null);
-				TextView cancel= (TextView) dialogView.findViewById(R.id.dialog_cancle);
-				TextView ensure= (TextView) dialogView.findViewById(R.id.dialog_confirm);
-				TextView title = (TextView) dialogView.findViewById(R.id.dialog_title);
-				cancel.setText("取消");
-				ensure.setText("确定");
-				try {
-					title.setText("清除缓存"+ DataCleanManager.getTotalCacheSize(getActivity()) + "?");
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				alertDialog = new AlertDialog.Builder(getActivity()).setView(dialogView).create();
-				dialogView.findViewById(R.id.dialog_cancle).setOnClickListener(new View.OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						alertDialog.dismiss();
-					}
-				});
-				dialogView.findViewById(R.id.dialog_confirm).setOnClickListener(new View.OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						DataCleanManager.clearAllCache(getActivity());
-						alertDialog.dismiss();
-					}
-				});
-				alertDialog.show();
+				cacheDialog();
 				break;
 			default:
 				break;
 		}
+	}
+
+	private void cacheDialog() {
+		View dialogView = View.inflate(getActivity(), R.layout.custom_dialog_view, null);
+		TextView cancel= (TextView) dialogView.findViewById(R.id.dialog_cancle);
+		TextView ensure= (TextView) dialogView.findViewById(R.id.dialog_confirm);
+		TextView title = (TextView) dialogView.findViewById(R.id.dialog_title);
+		cancel.setText("取消");
+		ensure.setText("确定");
+		try {
+			title.setText("清除缓存"+ DataCleanManager.getTotalCacheSize(getActivity()) + "?");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		alertDialog = new AlertDialog.Builder(getActivity()).setView(dialogView).create();
+		dialogView.findViewById(R.id.dialog_cancle).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				alertDialog.dismiss();
+			}
+		});
+		dialogView.findViewById(R.id.dialog_confirm).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				DataCleanManager.clearAllCache(getActivity());
+				alertDialog.dismiss();
+			}
+		});
+		alertDialog.show();
 	}
 
 	@Override
