@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.R;
+import com.umeng.socialize.Config;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.UMShareListener;
@@ -41,6 +42,7 @@ public class NewsDetail extends BaseActivity implements View.OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.news_webview);
+		mShareAPI = UMShareAPI.get(this);
 		initWidgets();
 		getIntentData();
 	}
@@ -137,6 +139,7 @@ public class NewsDetail extends BaseActivity implements View.OnClickListener{
 //        dialog.setTitle("友情提示");
 		dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 		dialog.setMessage("正在加载...");
+		Config.dialog = dialog;
 		dialog.show();
 	}
 	private void finishProgeressDialog(){
